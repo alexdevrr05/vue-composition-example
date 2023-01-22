@@ -1,23 +1,12 @@
 <script>
-import { ref } from 'vue';
+import useCounter from '@/composables/useCounter';
 
 export default {
   name: 'Counter',
   props: {},
   setup() {
-    const counter = ref(5);
-
-    // const increase = () => {
-    //   counter.value++;
-    // };
-    // const decrease = () => {
-    //   counter.value--;
-    // };
-    return {
-      counter,
-      increase: () => counter.value++,
-      decrease: () => counter.value--,
-    };
+    const { counter, increase, decrease } = useCounter(100);
+    return { counter, increase, decrease };
   },
 };
 </script>
