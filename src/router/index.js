@@ -22,6 +22,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "CounterView" */ '../views/CounterView.vue'),
   },
+  {
+    path: '/users',
+    name: 'users',
+    component: () =>
+      import(/* webpackChunkName: "CounterView" */ '../views/UsersView.vue'),
+  },
 ];
 
 const router = createRouter({

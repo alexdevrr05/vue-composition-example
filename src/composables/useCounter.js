@@ -7,6 +7,7 @@ const useCounter = (initialValue = 1) => {
     counter,
     increase: () => counter.value++,
     decrease: () => counter.value--,
+    reset: () => counter.value = initialValue,
   };
 };
 
